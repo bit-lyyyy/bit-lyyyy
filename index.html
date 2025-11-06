@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Adiv Ish-Shalom Portfolio.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<script>
+  document.title = "Adiv — Portfolio";
+</script>
+<style>
+/* Compact centered layout */
+body { max-width: 720px; margin: 24px auto 72px; padding: 0 16px; font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:#0f172a; }
+h1,h2{border-bottom:2px solid #e5e7eb;padding-bottom:.3em}
+img { display:block; margin:10px auto; max-width:100% !important; height:auto !important; border-radius:4px; }
+
+/* Table-based gallery that doesn't rely on CSS grid support */
+table.gallery { width:100%; border-collapse:collapse; margin:12px 0; }
+table.gallery td { padding:6px; border:none; text-align:center; vertical-align:top; }
+table.gallery img { width:100% !important; height:auto !important; border-radius:6px; }
+
+
+/* --- dark mode overrides --- */
+@media (prefers-color-scheme: dark) {
+  html, body { background:#242424 ; color:#e5e7eb; }
+  h1,h2,h3,h4,h5,h6 { color:#f8fafc; }
+  a { color:#60a5fa; }
+  a:visited { color:#93c5fd; }
+  a:hover, a:focus { color:#bfdbfe; }
+
+  figcaption, small, .muted { color:#94a3b8; }
+  h1, h2 {
+    border-bottom: 2px solid #7a7a7a !important;  /* try #4a4a4a, #585858, or #6b6b6b */
+    padding-bottom: .35em !important;
+  }
+  hr {
+    background: #4a4a4a !important;
+    height: 2px; border: 0;
+  }
+
+  /* code */
+  pre { background:#0f172a; border:1px solid #1f2937; }
+  :not(pre)>code { color:#e5e7eb; background:#0f172a; border:1px solid #1f2937; }
+
+  /* tables / gallery text */
+  table td, table th { color:#e5e7eb; }
+
+  /* blockquote */
+  blockquote { color:#e5e7eb; background:#111827; border-left-color:#60a5fa66; }
+}
+
+
+</style>
+<h1 id="adiv-ish-shalom-portfolio"><strong>Adiv Ish-Shalom Portfolio</strong></h1>
+<hr>
+<h1 id="nycbolt"><strong>NYC.Bolt</strong></h1>
+<p><a href="https://"></a>NYCBolt.com</p>
+<h3 id="30kw-electric-bicycle---the-fastest-in-nyc">30kW Electric Bicycle - The Fastest in NYC</h3>
+<p>I modified a Recon electric bicycle, adding a new controller and wiring harness. The motor tune I created is running 30kW of power making this one of the fastest electric bicycles in NYC. It has been raced against many bikes and it hasn't lost once. The stock torque plates which interface the motor axle to the swing arm weren't good enough which ended up twisting the axle. New torque plates are in the works.
+![](https://docs.monadical.com/uploads/7e638e5e-7476-4d4a-9379-d3c7e841fa6e.png =417x)![](https://docs.monadical.com/uploads/2e0ea338-46fa-495d-81cf-380b64d37859.gif =300x)
+![](https://docs.monadical.com/uploads/fe99a2b6-e2e6-4182-afb8-6ce385298457.jpg =717x)</p>
+<h3 id="battery-pack-manufacturing">Battery Pack Manufacturing</h3>
+<h4 id=""></h4>
+<p>![](https://docs.monadical.com/uploads/f517b0b9-5fc0-45a9-8b08-b6071cb15db4.gif =800x)
+<img src="https://docs.monadical.com/uploads/f30efd69-0d37-4021-903e-8d63306be7ad.jpg" alt="">
+<img src="https://docs.monadical.com/uploads/a3ee26a5-1ffd-4b0c-ae26-8b4e9f5a33ab.jpg" alt=""></p>
+<p style='text-align: center;'> 3.6kWh Surron Battery with Zero Frame Modification </p>
+<p><img src="https://docs.monadical.com/uploads/2aee0aee-55e7-45ac-99a4-9e765f00337b.jpg" alt=""></p>
+<h3 id="electric-skateboard-anti-spark-board-smd-soldering">Electric Skateboard Anti-Spark Board SMD Soldering</h3>
+<p>![](https://docs.monadical.com/uploads/051ad3b7-a971-4701-8ef4-136b92eab64a.jpg =360x)![](https://docs.monadical.com/uploads/89d76a58-fa5d-4730-ae99-24d1bbf3cd88.jpg =360x)</p>
+<h1 id="cooper-union-formula-sae"><strong>Cooper Union Formula SAE</strong></h1>
+<h3 id="module-m3-manufacturing">Module M3 Manufacturing</h3>
+<p><img src="https://docs.monadical.com/uploads/974756c8-88a0-4b3a-ad62-fad768695d9e.jpg" alt="">
+<img src="https://docs.monadical.com/uploads/e1f45eaa-9808-46a3-8ce2-99a617caecd8.jpg" alt=""></p>
+<p><img src="https://docs.monadical.com/uploads/34021699-d13a-4a48-9e15-520ec17b344a.jpg" alt="">
+<img src="https://docs.monadical.com/uploads/95366cc1-a742-48e9-897f-17d0519231c9.png" alt=""></p>
+<h3 id="module-m2-manufacturing">Module M2 Manufacturing</h3>
+<p>![](https://docs.monadical.com/uploads/cfc5fa6a-e2dd-4bc9-b19e-b90a4d2f29d4.png =360x)![](https://docs.monadical.com/uploads/cc7a0e77-167b-4b72-8be3-ac328d4eaa3f.png =360x)
+![](https://docs.monadical.com/uploads/64410dd4-48cf-4e97-a370-97ea19df0cd3.jpeg =720x)</p>
+<h3 id="fusible-link-testing">Fusible Link Testing</h3>
+<p>![](https://docs.monadical.com/uploads/17c3431f-f5fb-407a-ab39-35fd23a89317.gif =720x)</p>
+<h1 id="flapping-wing-robot"><strong>Flapping Wing Robot</strong></h1>
+<h3 id="flapping-wing-transmission-prototype">Flapping Wing Transmission Prototype</h3>
+<p>I designed a transmission which converts rotational motion from a motor to flapping of a wing. A consideration of this design was a targeted angle of reach for the wing.
+<img src="https://docs.monadical.com/uploads/3fdef2e4-f5e1-4eba-b585-cee27ffe3e94.png" alt=""></p>
+<h1 id="bio-inspired-aero-hood-to-increase-efficiency-of-pickup-trucks"><strong>Bio-Inspired Aero Hood to Increase Efficiency of Pickup Trucks</strong></h1>
+<p><img src="https://docs.monadical.com/uploads/d50333b6-db42-4f2f-ad00-0b960c05b14b.png" alt="">
+<img src="https://docs.monadical.com/uploads/efe60494-d119-42fd-b0a5-5c2e144fd696.png" alt="">
+<img src="https://docs.monadical.com/uploads/ee41dd2c-c9e9-4e97-83ae-9e3ca7556f87.png" alt=""></p>
+<h1 id="3d-printing"><strong>3D Printing</strong></h1>
+<h3 id="voron-24">Voron 2.4</h3>
+<p>I built a $350 mm^3$ core-xy 3D printer which is capable of moving and accelerating the extruder at $1,000 mm/s$ and $40,000 mm/s^2$ trasnlating to around 10 times faster than conventional consumer printers while producing more accurate parts.</p>
+<p>![](https://docs.monadical.com/uploads/a353a745-40d5-4b61-812e-d6cdbe5b92d5.jpg =450x) ![](https://docs.monadical.com/uploads/5018caa4-19d8-428d-a4d7-288e6477e725.gif =270x)</p>
+<h3 id="water-heater-manifold-to-redirect-cold-air">Water Heater Manifold to Redirect Cold Air</h3>
+<p>This water heater manifold attaches to the side of a hot water heater. The heater acts like an air conditioner, lowering the temperature of the room it's in. During the winter this is an issue, the water heater can't work efficently and the room gets very cold.
+![](https://docs.monadical.com/uploads/0cd393c9-e82b-4828-b9bc-bd39d1680996.png =360x) ![](https://docs.monadical.com/uploads/8f909108-6946-4736-9105-cb6c12222f67.png =360x)</p>
+<h3 id="polycarbonate-battery-casing-for-surron-electric-motorcycle">Polycarbonate Battery Casing for Surron Electric Motorcycle</h3>
+<p>![](https://docs.monadical.com/uploads/35890c59-fd80-441d-9f50-38ca2bdbc11e.png =350x)![](https://docs.monadical.com/uploads/54b2cfe6-e4d0-4881-a716-5c7f710c5b7e.png =370x)</p>
+<h1 id="motorcycle-engine-modifications"><strong>Motorcycle Engine Modifications</strong></h1>
+<p>I bored out my motorcycle engine to increase the displacement from 125cc to 186cc. I installed a new piston, camshaft, piston, crank shaft, cylinder head, cam chain, valves, fuel injectors, oil cooler, and programmed a new engine control unit (ECU). The Bike ran more efficently, increased power from 7hp to 21hp, increased top speed from 60mph to 85mph, and I programmed a mode to pop/shoot flames out of my exhaust on command.
+{%youtube cCb4onO4PnA %}
+<img src="https://docs.monadical.com/uploads/220c607e-c079-421e-ab2f-38ec5f6ea6c2.jpg" alt=""></p>
+
+</body>
+</html>
